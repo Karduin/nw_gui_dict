@@ -1,0 +1,24 @@
+{% include "header.html" %}
+   <body>
+      <h1>novelWriter GUI Dictionary</h1>
+      <div>{% include "search.html" %}</div>
+      <div class="container">
+         <table class="nw_table">
+            <thead>
+               <th>Context</th>
+               <th>Source</th>
+               <th>Translation</th>
+            </thead>
+            
+            {% for row in rows %}
+               <tr>
+                  <td>{{row["name"]}}</td>
+                  <td>{{row["source"]}}</td>
+                  <td>{{row["translation"]}}</td>
+               </tr>
+            {% endfor %}
+         </table>
+      
+   </div>
+   </body>
+</html>
